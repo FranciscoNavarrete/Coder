@@ -1,32 +1,37 @@
 const NavBar = () =>
     <>
         <title>Smart</title>
-        <nav >
+        {/* <!-- As a link --> */}
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a id ="navTitulo"class="navbar navbar-dark bg-dark"  href="#">Smart</a>
-    {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> */}
-    
+    {/* <a  href="#">Navbar</a> */}
+    <h1 href="#">Smart</h1>
+    {/* <a  href="#">Navbar</a> */}
   </div>
-  <div class="container-fluid">
-      <ul class="navbar-nav  mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tienda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
-      </ul>
-      
-    </div>
+  <div>
+  
+  </div>
+  
 </nav>
+<section>
+    <div class="m-3 col-2">
+        <ul class="list-group list-group-item-dark">
+            {/* <li onClick ="" class="list-group-item list-group-item-dark">Home</li>
+            <li class="list-group-item list-group-item-dark">Nosotros</li>
+            <li class="list-group-item list-group-item-dark">Tienda</li>
+            <li class="list-group-item list-group-item-dark">Contacto</li> */}
+            <a href="#">Home</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Tienda</a>
+            <a href="#">Contacto</a>
+        </ul>
+    </div>
+
+</section>
+
+
+{/* <!-- As a heading --> */}
+
     </>
 
 export default NavBar
