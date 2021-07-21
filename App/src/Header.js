@@ -15,7 +15,7 @@ const Header = ({nombre,edad,usuarios})=>{
     return (
         <header>
             <title>Smart</title>
-            <h1>TItulo</h1>
+            {/* <h1>TItulo</h1> */}
             <NavBar/>
             <ItemListContainer mensaje = "ACA VA EL MENSAJE POR PROP "/>
         </header>
