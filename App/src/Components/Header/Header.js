@@ -1,5 +1,8 @@
-import ItemListContainer from "./Components/ItemListContainer";
-import NavBar from "./Components/NavBar"
+import ItemListContainer from "../ItemListContainer";
+import Button from 'react-bootstrap/Button';
+import  'bootstrap/dist/css/bootstrap.min.css' ;
+import NavBar from "../NavBar/index";
+
  
 //aca se destructura
 const Header = ({nombre,edad,usuarios})=>{
@@ -18,6 +21,7 @@ const Header = ({nombre,edad,usuarios})=>{
             {/* <h1>TItulo</h1> */}
             <NavBar/>
             <ItemListContainer mensaje = "ACA VA EL MENSAJE POR PROP "/>
+            <Button className="m-5"variant="primary">Primary</Button>{' '}
         </header>
 
     )

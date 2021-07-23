@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./Components/Header/Header.js";
 
 const App = () => {
     const usuarios = [{ nombre: "Fran" }, { nombre: "Fran2" }]
