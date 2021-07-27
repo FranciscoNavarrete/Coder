@@ -11,7 +11,9 @@ import ItemListContainer from "./Components/ItemListContainer";
     //     console.log("hola mundo");
 
     // }
-    
+    const onAdd=(cantidad)=>{
+        console.log(cantidad)
+    }
     const App = () => {
         // const usuarios = [{ nombre: "Fran" }, { nombre: "Fran2" }]
     
@@ -22,7 +24,7 @@ import ItemListContainer from "./Components/ItemListContainer";
                 </Header> */}
                 <NavBar/>
                 <ItemListContainer mensaje = "ESTE ES EL GREETING"/>
-                <ItemCount stock={5} initial={1}/>
+                <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                 
                 {/* <p>Contador actual: {contador}</p>                
                 <button onClick = {sumarContador}>+</button> */}

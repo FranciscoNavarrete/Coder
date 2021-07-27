@@ -14,7 +14,11 @@ import FormControl from 'react-bootstrap/FormControl'
 
 
     const confirmar=()=>{
-        console.log("Confirmar Compra");
+        // console.log("Confirmar Compra");
+        if(stock>0){
+            onAdd(counter);
+            console.log("Este es el boton agregar al carrito");
+        }
     }
     // console.log(nombre, setNombre);
     //handledAdd
@@ -39,6 +43,7 @@ import FormControl from 'react-bootstrap/FormControl'
                 setstockTotal(stockTotal +1)
         }
     }
+
     return (
         <>
             <Card className=" custom m-5 col-11" style={{ width: '15rem' }}>
