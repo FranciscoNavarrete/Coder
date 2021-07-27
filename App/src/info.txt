@@ -1,0 +1,33 @@
+PROPS
+
+STATE: variables locales dentro de un componentes que podemos controlas atraves de un render
+
+CICLO DE VIDA: son todos los estadios que pueden pasar un componente 
+mount
+costructor(props){
+    this.state = {
+        nombre : "Fran"
+    }
+}
+render()
+componentDidMount()
+
+udpdate 
+
+unmount
+
+
+HOOKS: Todos los hooks son funciones ejecutadas y cada uno hace algo distinto. 
+Se tienen que ejecutar siempre en el mismo orden
+,es decir que no puedo teenrlos en condicionales y siempre tienen que estar adentro de una 
+funcion
+
+-useState
+-useEffect
+-useContext 
+-useCallback
+-useMemo
+-useRef
+-useReducer
+-useLayoutEffect
+-use
