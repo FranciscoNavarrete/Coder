@@ -31,3 +31,39 @@ funcion
 -useReducer
 -useLayoutEffect
 -use
+
+
+//Los componrentes se van a volver a rendedizar cuando cambia su
+//estado o sus props. Tamb cuando su padre se vuelva a redibujar.
+//Cada reejecucion de un componente implica que se inicia un nuevo ciclo de vida
+//
+//USE EFFECT: efecto secundario,se usa para pedir cosas a una api, inicializar
+//temporarizadores y mostrarlo en pantalla 
+
+//async 
+//fetch-setTimeout-setInterval-cache-promise-eventos
+
+//Promesa. Operacion que dura en el tiempo. Va a tener propiedades:estado(pending-
+//fullfiled- rejected)- value
+//sacan los callback of hell(Funcion dentro de otra) o pyramid
+//Las promesas dan un objetos
+
+// const operacion = new Promise((resolve,reject)=>{
+//     //aca dentro va la operacion que tarda en el tiempo
+//     setTimeout(() => {
+//         // console.log('Hola');
+//         const pedido_a_bd = ["Fran","Hola"]
+//         resolve(pedido_a_bd);
+//     }, 2000);
+// })
+// operacion.then((array_de_usuarios)=>{
+//     console.log(array_de_usuarios)
+//     console.log('Termino bien la promesa');
+// })
+// operacion.then(()=>{
+//     console.log("Termino la promesa bien")
+// }); //termina bien
+// operacion.catch(()=>{
+//     console.log("Termino la promesa mal")
+// }); //termina mal
+

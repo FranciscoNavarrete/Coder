@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
+
 import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
-
-
-
 
 // const ItemCount = ({ value = 10 }) => {
     const ItemCount = ({ stock, initial, onAdd }) => {
@@ -33,7 +32,6 @@ import FormControl from 'react-bootstrap/FormControl'
         }else{
         }
     }
-
     const itemSubstract = () =>
     {
         if(counter <= 1){
@@ -43,14 +41,13 @@ import FormControl from 'react-bootstrap/FormControl'
                 setstockTotal(stockTotal +1)
         }
     }
-
     return (
         <>
             <Card className=" custom m-5 col-11" style={{ width: '15rem' }}>
                 <Card.Body>
                     <InputGroup className="mb-3">
                         <Button onClick={itemSubstract} variant="dark" id="button-addon1">-</Button>
-                        <FormControl className="text-center"  value= {(counter)}
+                        <FormControl className="text-center" placeholder={(counter)} disabled
                         />
                         <Button onClick={itemAdd} variant="dark" id="button-addon2">+</Button>
                     </InputGroup>
@@ -61,5 +58,4 @@ import FormControl from 'react-bootstrap/FormControl'
         </>
     )
 }
-
 export default ItemCount;
