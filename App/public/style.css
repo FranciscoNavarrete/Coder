@@ -1,7 +1,42 @@
-h1 {
-    color: white;
-    text-align:right;
-  }
-  #cart{
-    color: white;
-  }
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 60px;
+}
+input{
+    font-size: 1.2rem;
+    width: 100%;
+    color: grey;
+}
+
+.card-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border : 0px solid;
+
+}
+
+.card{
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    border : 0px solid;
+    
+}
+.card p{
+    border : 0px solid;
+
+    padding: 5px;
+    text-align: center;
+}
+
+.card img{
+    border : 0px solid;
+
+    max-height: 170px;
+}

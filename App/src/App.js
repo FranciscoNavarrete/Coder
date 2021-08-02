@@ -15,7 +15,6 @@ import ItemListContainer from "./Components/ItemListContainer";
                
                 <NavBar/>
                 <ItemListContainer />
-                <ItemCount stock={5} initial={1} onAdd={onAdd}/>
                 
                 
             </>

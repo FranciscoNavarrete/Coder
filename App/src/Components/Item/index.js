@@ -1,46 +1,31 @@
+import React from 'react'
+import { useFetchItem } from '../../Hooks/useFetchItem'
+import ItemDetailContainer from '../ItemDetailContainer'
+import ItemList from '../ItemList'
 
 
-const Item = ({id, title, price, pictureUrl }) => {
-    const arreglo = {
-        id: 1,
-        title: 'prueba',
-        price: 2500,
-        pictureUrl: '',
-    }
-    // console.log(arreglo);  
-    const promesa = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            
-            resolve(arreglo);
-        }, 2000);
-    })
-    promesa.then((array) => {
-        console.log("Este es el then", array);
-        console.log('Termino bien la promesa');
-        
-        
-    })
-    promesa.catch(() => {
-        console.log("Termino la promesa mal")
-    });
-    function muestraAlgo(){
-        setTimeout(() => {
-            <p>Que se muestro algo</p>
-            
-        }, 2000);
-    }
+
+const Item = ({ category }) => {
+    const {data,loading} = useFetchItem(category);
+    
     return (
-        
-        <div className="m-5 col-11 ">
-                {muestraAlgo()}
-                <p>{arreglo.id}</p>
-                <p>{arreglo.title}</p>
-                <p>{arreglo.price}</p>
-                <p>{arreglo.pictureUrl}</p>
+        <>
+            <h3>{category}</h3>
+
+            {loading && <p>Cargando...</p>}
+            <div className="card">
+
+                {
+                    
+                    data.map((img) => (
+                        
+                            <ItemList {...img} />
+                            
+                            ))
+                }
+
             </div>
+        </>
     )
 }
-
-
-
 export default Item

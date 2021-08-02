@@ -43,7 +43,7 @@ import FormControl from 'react-bootstrap/FormControl'
     }
     return (
         <>
-            <Card className=" custom m-5 col-11" style={{ width: '15rem' }}>
+            <Card  style={{ width: '15rem' }}>
                 <Card.Body>
                     <InputGroup className="mb-3">
                         <Button onClick={itemSubstract} variant="dark" id="button-addon1">-</Button>
