@@ -1,19 +1,13 @@
-import React from 'react'
-import ItemCount from '../ItemCount'
+import ItemDetail from "../ItemDetail";
+import Card from 'react-bootstrap/Card'
 
-const ItemDetailContainer = ({id,title,image,price,description}) => {
-    // console.log(id,title,url);
+
+
+const ItemDetailContainer = (  ) => {
+    
     return (
-        
-        <div >
-            <img  alt={title} src={image}  width="150" height="150" text-align ="center" />
-            <p>{title}</p>
-            <p>Precio: ${price}</p>
-            <p>Descripcion: {description}</p>
-            <ItemCount  stock={5} initial={1} />
-        </div>
-
-       
+            <ItemDetail/>
     )
 }
+
 export default ItemDetailContainer
