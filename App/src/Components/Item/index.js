@@ -4,11 +4,11 @@ import ItemList from '../ItemList'
 
 const Item = ({ category }) => {
     const {data,loading} = useFetchItem(category);
-    return (
-        <>
+    return ( 
+        <div className="container2">
             <h3>{category}</h3>
             {loading && <p>Cargando...</p>}
-            <div className="card">
+            <div className="row">
                 {
                     data.map((img) => (
                             <ItemList {...img} />
@@ -16,7 +16,7 @@ const Item = ({ category }) => {
                 }
             </div>
             
-        </>
+        </div>
     )
 }
 export default Item

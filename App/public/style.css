@@ -20,7 +20,7 @@ input{
 }
 
 .card{
-    align-items: center;
+    align-items: flex-start;
     align-content: center;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -30,7 +30,6 @@ input{
 }
 .card p{
     border : 0px solid;
-
     padding: 5px;
     text-align: center;
 }
@@ -39,4 +38,12 @@ input{
     border : 0px solid;
 
     max-height: 170px;
+}
+
+.container2 {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 210px;
+    margin-right: auto;
+    margin-left: auto;
 }

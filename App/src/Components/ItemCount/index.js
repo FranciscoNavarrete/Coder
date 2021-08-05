@@ -42,7 +42,7 @@ import FormControl from 'react-bootstrap/FormControl'
         }
     }
     return (
-        <>
+        <div >
             <Card  style={{ width: '15rem' }}>
                 <Card.Body>
                     <InputGroup className="mb-3">
@@ -53,9 +53,9 @@ import FormControl from 'react-bootstrap/FormControl'
                     </InputGroup>
                     
                 </Card.Body>
-                <Button onClick={confirmar}variant="dark">Agregar a carrito</Button>
+                <Button style={{ width: '14rem' }} className="mb-3" onClick={confirmar}variant="dark">Agregar a carrito</Button>
             </Card>
-        </>
+        </div>
     )
 }
 export default ItemCount;

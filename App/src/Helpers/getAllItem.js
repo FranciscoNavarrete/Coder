@@ -1,5 +1,5 @@
-export const getItem = async (category) => {
-    const url = 'https://fakestoreapi.com/products/category/electronics';
+export const getAllItem = async (category) => {
+    const url = 'https://fakestoreapi.com/products';
     const resp = await fetch(url);
     const  data  = await resp.json();
 
@@ -11,7 +11,6 @@ export const getItem = async (category) => {
             image: prod.image,
             price: prod.price,
             description: prod.description
-           
         }
     })
 

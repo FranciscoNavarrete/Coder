@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card'
 const ItemDetailContainer = (  ) => {
     
     return (
-            <ItemDetail/>
+            <ItemDetail  className="left "/>
     )
 }
 

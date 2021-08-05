@@ -67,3 +67,38 @@ funcion
 //     console.log("Termino la promesa mal")
 // }); //termina mal
 
+
+//Promise + Fetch
+//obj que adentro tiene prop, que esa prop 
+//triggers(eventos)async - timers(contadores)-request(pedidos)
+
+
+//CLIENTE
+
+//metodo(verbo) - URL - version
+//headers
+//body
+
+//SERVIDOR
+//version - status - mensaje
+//headers
+//body
+
+//METODOS: representa la intencion del cliente(GET, POST,PUT, PATCH,DELETE  )
+//URL: 
+
+//FETCH: API WEB(AJAX)
+
+
+
+
+SPA= sigle page application
+
+BrowserRouter: History API|
+HashRouter: Location API
+MemoryRouter: una app que no esta en entorno navegador
+StaticRouter: SSR(server side rendering)
+
+
+Link/NavLink: Genera un link sin recarga
+Route: 
