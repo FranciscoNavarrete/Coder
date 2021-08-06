@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 
 export const Contacto = () => {
     return (
-        <>
+        <div className="container  ">
             <Row xs={1} md={2} className="g-4">
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
@@ -57,7 +57,7 @@ export const Contacto = () => {
                     </blockquote>
                 </Card.Body>
             </Card>
-        </>
+        </div>
     )
 }
 export default Contacto

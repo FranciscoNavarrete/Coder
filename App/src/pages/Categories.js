@@ -3,18 +3,25 @@ import ItemDetail from '../Components/ItemDetail'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import {useParams} from 'react-router-dom';
 
 
 export const Categories = () => {
+
+    const {id} = useParams();
     return (
         <>
+
+             <h1>{id}</h1>
+                       
             <Row xs={1} md={2} className="g-4">
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
                     <h1></h1>
                         <Card>
-                            <h1>Cart</h1>
+                            <h1>Categories</h1>
                         </Card>
+                        
                     </Col>
                 ))}
             </Row>

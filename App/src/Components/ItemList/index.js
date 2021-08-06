@@ -4,13 +4,18 @@ import Card from 'react-bootstrap/Card'
 
 const ItemList = ({id,title,image,price,description}) => {
     // console.log(id,title,url);
+    
     return (
-        <Card className="col-3">
+        <Card className= "container col-4 row-3">
+            <div className= "container">
             <img  alt={title} src={image}  width="150" height="150" text-align ="center" />
-            <p>{title}</p>
+            <p text-align="center">{title}</p>
+            </div>
             {/* <p>Precio: ${price}</p>
             <p>Descripcion: {description}</p> */}
-            <ItemCount  stock={5} initial={1} />
+            <div className= "container-fluid">
+            <ItemCount  stock={5} initial={0} />
+            </div>
         </Card>
     )
 }

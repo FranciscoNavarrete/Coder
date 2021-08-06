@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget"
 
 const NavBar = () =>
     <header>
-        <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <nav className="container navbar navbar-expand-lg  navbar-dark bg-dark">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

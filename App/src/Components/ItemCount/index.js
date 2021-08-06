@@ -53,7 +53,10 @@ import FormControl from 'react-bootstrap/FormControl'
                     </InputGroup>
                     
                 </Card.Body>
+                <div className="container-fluid">
                 <Button style={{ width: '14rem' }} className="mb-3" onClick={confirmar}variant="dark">Agregar a carrito</Button>
+
+                </div>
             </Card>
         </div>
     )

@@ -5,7 +5,7 @@ import ItemList from '../ItemList'
 const Item = ({ category }) => {
     const {data,loading} = useFetchItem(category);
     return ( 
-        <div className="container2">
+        <div className="container  ">
             <h3>{category}</h3>
             {loading && <p>Cargando...</p>}
             <div className="row">
@@ -15,7 +15,6 @@ const Item = ({ category }) => {
                             ))
                 }
             </div>
-            
         </div>
     )
 }

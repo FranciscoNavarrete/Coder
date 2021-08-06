@@ -1,10 +1,6 @@
 import NavBar from "./Components/NavBar"
-import ItemCount from "./Components/ItemCount";
-import ItemListContainer from "./Components/ItemListContainer";
-import {BrowserRouter, Route,Switch} from "react-router-dom";
-import Contacto from "./pages/Contacto";
-import Cart from "./pages/Cart";
-
+import {BrowserRouter, Route,Switch} from 'react-router-dom';
+import rutas from "./route-config";
     
     const onAdd=(cantidad)=>{
         console.log(cantidad)
@@ -13,19 +9,20 @@ import Cart from "./pages/Cart";
         // const usuarios = [{ nombre: "Fran" }, { nombre: "Fran2" }]
         
         return (
+            <>
             <BrowserRouter>
                 <NavBar/>
                 <Switch>
-                    <Route path="/Contacto" component={Contacto}/>
-                    <Route path="/Cart" component={Cart}/>
-                    <Route path="/categories/electronics" component={ItemListContainer} />
-                    <Route path="/categories/jewelery" component={ItemListContainer} />
-                    <Route path="/categories/men-clothing" component={ItemListContainer} />
-                    <Route path="/categories/women-clothing" component={ItemListContainer}/>
-                    <Route path="/"component={ItemListContainer}/>
+                    {rutas.map(ruta => 
+                    <Route 
+                            key={ruta.path}
+                            path={ruta.path}
+                            exact={ruta.exact}>
+                            <ruta.componente />
+                    </Route>)}
                 </Switch>
             </BrowserRouter>
-            
+            </>
         )
     }
 
