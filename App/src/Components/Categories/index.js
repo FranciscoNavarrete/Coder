@@ -1,22 +1,21 @@
 import React from 'react'
-import { useFetchItem } from '../../Hooks/useFetchItem'
-import ItemList from '../ItemList'
+import { useFetchCategories } from '../../Hooks/useFetchCategories'
+import ListCategories from '../ListCategories';
 
-const Item = ({ category }) => {
-    const {data,loading} = useFetchItem(category);
-    console.log(data)
+
+const Categories = ({ category }) => {
+    const {data,loading} = useFetchCategories(category);
     return ( 
         <div className="container  ">
-            <h3>{category}</h3>
             {loading && <p>Cargando...</p>}
             <div className="row">
                 {
                     data.map((img) => (
-                            <ItemList {...img} />
+                            <ListCategories key="{img}"{...img} />
                             ))
                 }
             </div>
         </div>
     )
 }
-export default Item
+export default Categories

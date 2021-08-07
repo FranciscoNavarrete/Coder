@@ -1,5 +1,5 @@
 export const getAllItem = async () => {
-    const url = 'https://fakestoreapi.com/products/';
+    const url = `https://fakestoreapi.com/products/`;
     const resp = await fetch(url);
     const  data  = await resp.json();
     
