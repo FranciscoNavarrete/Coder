@@ -11,13 +11,10 @@ export const useFetchItem = (category) => {
     useEffect(()=>{
         getAllItem(category)
         .then(datos=>{
-            setTimeout(() => {
                 setstate({
                     data: datos,
                     loading:false
                 })
-                
-            }, 1000);
         })
     },[category])
     return state;

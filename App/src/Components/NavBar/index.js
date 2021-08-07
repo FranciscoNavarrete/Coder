@@ -25,7 +25,7 @@ const NavBar = () =>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <Link className="dropdown-item" to="/Categories/electronics">Electronics</Link>
                             <Link className="dropdown-item" to="/Categories/jewelery">Jewelery</Link>
-                            <Link className="dropdown-item" to="/Categories/women's clothing">Men clothing</Link>
+                            <Link className="dropdown-item" to="/Categories/men's clothing">Men clothing</Link>
                             <Link className="dropdown-item" to="/Categories/women's clothing">Women clothing</Link>
                         </div>
 
