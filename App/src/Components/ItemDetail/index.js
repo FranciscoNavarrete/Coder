@@ -1,30 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useFetchItem } from '../../Hooks/useFetchItem'
-import ItemDetailList from '../ItemDetailList'
 import Row from 'react-bootstrap/Row'
+import {useParams} from 'react-router-dom'
 
 
-const ItemDetail = ({ category }) => {
-    const { data, loading } = useFetchItem(category);
+const ItemDetail = () => {
+
+    const {id} = useParams();
+    const [item,setItem]=useState([]);
+    useEffect(()=>{
+        obtenerItem()
+        setItem({
+            loading:false
+        })
+    },[])
+
+    const obtenerItem = async ()=>{
+        const data = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const prod = await data.json()
+        setItem(prod)
+    }
+    
     return (
         <>
-            <h3></h3>
-            {loading && <p>Cargando...</p>}
-
-            <Row xs={1} md={2} className="g-4">
-                
-                    <lu>
-                        
-                            <ol>
-                                {
-                                    data.map((img) => (<ItemDetailList {...img} />))
-                                }
-                            </ol>
-                        
-                    </lu>
-                
-                
-            </Row>
+        <div className="container">  
+            <h1>{item.title}</h1>
+            <hr/>
+            <h3>-${item.price}- </h3>
+            <img src={item.image}  width="150" height="150" alt="thumbnail" />
+            <hr/>
+            <p>{item.description}</p>
+        </div>
         </>
     )
 }

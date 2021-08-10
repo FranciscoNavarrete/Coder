@@ -1,13 +1,12 @@
 import ItemDetail from "../ItemDetail";
 import Card from 'react-bootstrap/Card'
 
-
-
-const ItemDetailContainer = (  ) => {
-    
+const ItemDetailContainer = () => {
     return (
-            <ItemDetail  className="left "/>
-    )
+        <div>
+            <ItemDetail />
+        </div>
+    );
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

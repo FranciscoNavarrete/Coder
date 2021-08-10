@@ -2,7 +2,6 @@ import React from 'react'
 import { useFetchCategories } from '../../Hooks/useFetchCategories'
 import ListCategories from '../ListCategories';
 
-
 const Categories = ({ category }) => {
     const {data,loading} = useFetchCategories(category);
     return ( 
@@ -12,7 +11,7 @@ const Categories = ({ category }) => {
                 {
                     data.map((img) => (
                             <ListCategories key={img.id}{...img} />
-                            ))
+                            )) 
                 }
             </div>
         </div>

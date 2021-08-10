@@ -4,10 +4,9 @@ import ItemList from '../ItemList'
 
 const Item = ({ category }) => {
     const {data,loading} = useFetchItem(category);
-    console.log(data)
     return ( 
         <div className="container  ">
-            <h3>{category}</h3>
+            <h3>Soy category:{category}</h3>
             {loading && <p>Cargando...</p>}
             <div className="row">
                 {
