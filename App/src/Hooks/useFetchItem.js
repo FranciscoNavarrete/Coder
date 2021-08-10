@@ -7,7 +7,6 @@ export const useFetchItem = (category) => {
         data:[],
         loading:true
     });
-
     useEffect(()=>{
         getAllItem(category)
         .then(datos=>{

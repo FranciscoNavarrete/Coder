@@ -4,7 +4,6 @@ export const getAllItem = async () => {
     const  data  = await resp.json();
     
     const item = data.map(prod => {
-       
         return {
             id: prod.id,
             title: prod.title,

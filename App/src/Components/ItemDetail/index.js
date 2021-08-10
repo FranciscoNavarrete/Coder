@@ -1,14 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFetchItem } from '../../Hooks/useFetchItem'
 import ItemDetailList from '../ItemDetailList'
-import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 
 const ItemDetail = ({ category }) => {
     const { data, loading } = useFetchItem(category);
-
     return (
         <>
             <h3></h3>

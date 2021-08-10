@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
+
 
 import Button from 'react-bootstrap/Button';
 
@@ -6,24 +8,19 @@ import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 
-// const ItemCount = ({ value = 10 }) => {
     const ItemCount = ({ stock, initial, onAdd }) => {
     const [counter, setCounter] = useState(initial);
     const [stockTotal, setstockTotal] = useState(stock);
 
+    const [stateOnAdd,setStateOnAdd] = useState(0);
+
 
     const confirmar=()=>{
-        // console.log("Confirmar Compra");
         if(stock>0){
-            onAdd(counter);
-            console.log("Este es el boton agregar al carrito");
+            console.log("Agregar al carrito, Tiene que llevar al carrito, con todos los productos por comprar. Llevandolo la cantidad del prod", counter);
         }
     }
-    // console.log(nombre, setNombre);
-    //handledAdd
-    //DOS MANERAS PARA MANEJAR EL COUNTER
     const itemAdd = () => {
-        //setCounter((c) => c + 1);
         if(stockTotal<=1)
             {console.log("No hay mas stock")}
         if(counter <= stock){
@@ -34,7 +31,7 @@ import FormControl from 'react-bootstrap/FormControl'
     }
     const itemSubstract = () =>
     {
-        if(counter <= 1){
+        if(counter <= 0){
             console.warn("El valor no puede ser 0")
         }else{
                 setCounter(counter-1)
@@ -54,8 +51,9 @@ import FormControl from 'react-bootstrap/FormControl'
                     
                 </Card.Body>
                 <div className="container-fluid">
-                <Button style={{ width: '14rem' }} className="mb-3" onClick={confirmar}variant="dark">Agregar a carrito</Button>
-
+                <Link to="/Cart/id">
+                <Button  style={{ width: '14rem' }} disabled={!counter>0} className="mb-3" onClick={confirmar}variant="dark">Agregar a carrito</Button>
+                </Link>
                 </div>
             </Card>
         </div>

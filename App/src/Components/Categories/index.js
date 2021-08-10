@@ -11,7 +11,7 @@ const Categories = ({ category }) => {
             <div className="row">
                 {
                     data.map((img) => (
-                            <ListCategories key="{img}"{...img} />
+                            <ListCategories key={img.id}{...img} />
                             ))
                 }
             </div>
