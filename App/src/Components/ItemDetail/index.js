@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { useFetchItem } from '../../Hooks/useFetchItem'
 import Row from 'react-bootstrap/Row'
 import {useParams} from 'react-router-dom'
+import Spinner from 'react-bootstrap/Spinner'
+import ItemCount from '../ItemCount'
 
 
 const ItemDetail = () => {
 
     const {id} = useParams();
     const [item,setItem]=useState([]);
+    const loading = true;
     useEffect(()=>{
         obtenerItem()
-        setItem({
-            loading:false
-        })
+        
     },[])
-
     const obtenerItem = async ()=>{
         const data = await fetch(`https://fakestoreapi.com/products/${id}`);
         const prod = await data.json()
@@ -24,12 +24,15 @@ const ItemDetail = () => {
     return (
         <>
         <div className="container">  
+        
             <h1>{item.title}</h1>
             <hr/>
-            <h3>-${item.price}- </h3>
             <img src={item.image}  width="150" height="150" alt="thumbnail" />
+            <h3>-${item.price}- </h3>
             <hr/>
             <p>{item.description}</p>
+            <ItemCount stock={5} initial={0}/>
+
         </div>
         </>
     )

@@ -8,7 +8,6 @@ const ListCategoriesContainer = (  ) => {
         <div className="container" >
             <h1>Categoria: {category}</h1>
             <Categories category={category}/>
-            
         </div>
     )
 }

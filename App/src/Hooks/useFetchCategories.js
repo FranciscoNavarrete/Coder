@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import GetAllCategories from "../Helpers/GetAllCategories";
+import getAllCategories from "../Helpers/getAllCategories";
 
 
 export const useFetchCategories = (category) => {
@@ -9,7 +9,7 @@ export const useFetchCategories = (category) => {
     });
 
     useEffect(()=>{
-        GetAllCategories(category)
+        getAllCategories(category)
         .then(datos=>{
                 setstate({
                     data: datos,

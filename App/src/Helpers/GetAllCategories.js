@@ -1,6 +1,4 @@
-import React from 'react'
-
- const GetAllCategories = async ( category ) => {
+ const getAllCategories = async ( category ) => {
      
     const url = `https://fakestoreapi.com/products/category/${category}`;
     const resp = await fetch(url);
@@ -19,4 +17,4 @@ import React from 'react'
     })
     return categories;
 } 
-export default GetAllCategories
+export default getAllCategories

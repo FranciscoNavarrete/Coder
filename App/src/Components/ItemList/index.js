@@ -1,8 +1,10 @@
 import ItemCount from '../ItemCount'
 import Card from 'react-bootstrap/Card'
+import { Link } from "react-router-dom"
+
 
 const ItemList = ({id,title,image,price,description}) => {
-    
+    console.log("Ite List",id);
     return (
         <Card className= "container col-4 row-3">
             <div className= "container">
@@ -10,6 +12,7 @@ const ItemList = ({id,title,image,price,description}) => {
             <p text-align="center">{title}</p>
             </div>
             <div className= "container-fluid">
+            <Link  to={`/itemDetail/${id}`} >Ver más...</Link>
             <ItemCount  stock={5} initial={0} />
             </div>
         </Card>
