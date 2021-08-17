@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 
 
 const ItemList = ({id,title,image,price,description}) => {
-    console.log("Ite List",id);
     return (
         <Card className= "container col-4 row-3">
             <div className= "container">

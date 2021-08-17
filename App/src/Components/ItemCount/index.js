@@ -52,7 +52,7 @@ import FormControl from 'react-bootstrap/FormControl'
                 </Card.Body>
                 <div className="container-fluid">
                 <Link to="/Cart/id">
-                <Button  style={{ width: '14rem' }} disabled={!counter>0} className="mb-3" onClick={confirmar}variant="dark">Agregar a carrito</Button>
+                <Button  style={{ width: '14rem' }} disabled={!counter>0} className="mb-3" onClick={() => onAdd(counter)}variant="dark">Agregar a carrito</Button>
                 </Link>
                 </div>
             </Card>
