@@ -45,6 +45,8 @@ const ItemDetail = () => {
             <Link to="/cart">
                 <button onClick={handleOnAdd}>Finalizar compra</button>
             </Link>
+
+            
             {/* <ItemCount stock={5} initial={0}/> */}
         </div>
         </>
