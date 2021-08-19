@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
  
 
 const ListCategories = (category) => {
+
     const {id, title, image} = category;
     
     return (

@@ -18,6 +18,7 @@ import FormControl from 'react-bootstrap/FormControl'
     const confirmar=()=>{
         if(stock>0){
             console.log("Agregar al carrito, Tiene que llevar al carrito, con todos los productos por comprar. Llevandolo la cantidad del prod", counter);
+            onAdd(counter);
         }
     }
     const itemAdd = () => {
@@ -40,7 +41,7 @@ import FormControl from 'react-bootstrap/FormControl'
     }
     return (
         <div >
-            <Card  style={{ width: '15rem' }}>
+            <Card  style={{ width: '10rem' }}>
                 <Card.Body>
                     <InputGroup className="mb-3">
                         <Button onClick={itemSubstract} variant="dark" id="button-addon1">-</Button>
@@ -52,7 +53,7 @@ import FormControl from 'react-bootstrap/FormControl'
                 </Card.Body>
                 <div className="container-fluid">
                 <Link to="/Cart/id">
-                <Button  style={{ width: '14rem' }} disabled={!counter>0} className="mb-3" onClick={() => onAdd(counter)}variant="dark">Agregar a carrito</Button>
+                <Button  style={{ width: '8rem' }} disabled={!counter>0} className="mb-3" onClick={() => onAdd(counter)}variant="dark">Agregar a carrito</Button>
                 </Link>
                 </div>
             </Card>

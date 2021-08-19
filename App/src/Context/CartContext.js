@@ -22,7 +22,7 @@ export function CartContextProvider({ children }) {
     // console.log("Children",children);
 
     const [items, setItems] = useState([])
-    console.log("Esto es el context",items)
+    
     const addItem = (item, quantity) => {
         const index = items.findIndex(itemInList => itemInList.item.id === item.id)
         

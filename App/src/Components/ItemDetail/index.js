@@ -34,7 +34,7 @@ const ItemDetail = () => {
         
     return (
         <>
-        <div className="container">  
+        <div xs={6} md={4} className="container">  
             <h1>{item.title}</h1>
             <hr/>
             <img src={item.image}  width="150" height="150" alt="thumbnail" />

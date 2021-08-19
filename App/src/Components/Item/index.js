@@ -5,7 +5,7 @@ import Spinner from 'react-bootstrap/Spinner'
 
 const Item = ({ category }) => {
     const { data, loading } = useFetchItem(category);
-
+    
 
     return (
         <div className="container  ">
