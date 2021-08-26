@@ -34,7 +34,7 @@ const NavBar = () =>
                     </li>
                 </ul>
                 <span className="navbar-text ml-auto" >
-                    <Link className="nav-link " to="/Cart"><CartWidget /></Link>
+                    <Link className="nav-link " to="/cart"><CartWidget /></Link>
 
                 </span>
             </div>

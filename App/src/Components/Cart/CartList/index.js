@@ -1,11 +1,25 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Table } from 'react-bootstrap'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 export const CartList = (item) => {
-    console.log(item);
+    
     return (
         <div>
-            <Table striped bordered hover>
+            
+            <Card>
+                <Card.Header as="h5">{item.item.title}</Card.Header>
+                <Card.Body>
+                    <Card.Title>Cantidad: {item.quantity}</Card.Title>
+                    <Card.Text>
+                        Precio: {item.item.price}
+                    </Card.Text>
+                    
+                </Card.Body>
+            </Card>
+                    
+            {/* <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -20,7 +34,7 @@ export const CartList = (item) => {
                             <td>{item.quantity}</td>
                         </tr>
                     </tbody>
-                </Table>
+                </Table> */}
         </div>
     )
 }

@@ -39,6 +39,9 @@ import FormControl from 'react-bootstrap/FormControl'
                 setstockTotal(stockTotal +1)
         }
     }
+
+    
+
     return (
         <div >
             <Card  style={{ width: '10rem' }}>
@@ -52,7 +55,7 @@ import FormControl from 'react-bootstrap/FormControl'
                     
                 </Card.Body>
                 <div className="container-fluid">
-                <Link to="/Cart/id">
+                <Link >
                 <Button  style={{ width: '8rem' }} disabled={!counter>0} className="mb-3" onClick={() => onAdd(counter)}variant="dark">Agregar a carrito</Button>
                 </Link>
                 </div>

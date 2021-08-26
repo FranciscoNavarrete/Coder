@@ -6,7 +6,7 @@ import { Contacto } from "./pages/Contacto";
 
 
 const rutas = [
-    {path:'/ItemDetail/:id',componente:ItemDetailContainer },
+    {path:'/item/:id',componente:ItemDetailContainer },
     {path:'/cart', componente:Cart, exact:true},
     {path:'/Categories/:category',componente:ListCategoriesContainer },
     {path:'/Contacto',componente:Contacto },
