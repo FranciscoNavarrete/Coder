@@ -1,14 +1,22 @@
 import { useContext, useState } from 'react'
 import { Button, Table } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
+import {Link} from "react-router-dom";
+import Form from "../form/form"
 import  CartContext from '../../Context/CartContext';
 
 export default function Cart() {
   
-    const { items, finalPrice, finalQuantity, addItem, removeItem, clear } = useContext(CartContext)
-    console.log("Items que llega",items);
-    const item = items[0];
-    console.log("items", item)
+    const { items, finalPrice, removeItem } = useContext(CartContext)
+    const [successBuy, setSuccessBuy] = useState(false);
+
+    if (items.length === 0 && !successBuy)
+    return (
+      <>
+        <p>No hay items en tu carrito!</p>
+        <Link to="/">Volver a inicio</Link>
+      </>
+    );
      return(
          <div>
              {
@@ -28,6 +36,7 @@ export default function Cart() {
              <div className="container">
                  <p>Precio Final: <strong>{`US$${finalPrice.toFixed(2)}`}</strong></p>
              </div>
+             <Form/>
          </div>
      )
         

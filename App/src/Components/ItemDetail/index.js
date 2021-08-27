@@ -23,11 +23,20 @@ export default function ItemDetail({item}){
         
     return (
         <>
-        <p>{item.title}</p>
-        <img src = {item.image}width="150" height="150" text-align ="center" alt="thumbnail"></img>
-        <p>Precio: {item.price} </p>
-        <p>Descripcion: {item.description} </p>
-        {showCounter && <ItemCount initial={1} stock={5} onAdd={handleOnAdd} />}
+        <div className="container">
+            <p>{item.title}</p>
+            <img src = {item.image}width="150" height="150" text-align ="center" alt="thumbnail"></img>
+            <p>Precio: {item.price} </p>
+            <p>Descripcion: {item.description} </p>
+            {showCounter && <ItemCount initial={1} stock={5} onAdd={handleOnAdd} />}
+            {!showCounter &&(
+            <Link to="/cart">
+            <button >
+                Finalizar compra
+            </button>
+            </Link>
+            )}
+        </div>
         </>
     )
 }
