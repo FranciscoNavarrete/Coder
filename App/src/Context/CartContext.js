@@ -13,7 +13,7 @@
 // //     // isInCart=(id)=>{
 
 // //     // } 
-    
+
 // import React, { createContext, useState } from 'react'
 
 // const CartContext = createContext({})
@@ -22,10 +22,10 @@
 //     // console.log("Children",children);
 
 //     const [items, setItems] = useState([])
-    
+
 //     const addItem = (item, quantity) => {
 //         const index = items.findIndex(itemInList => itemInList.item.id === item.id)
-        
+
 //         if(index !== -1){
 //             const nuevoItems = items
 //             nuevoItems[index] = { item: nuevoItems[index].item, quantity: nuevoItems[index].quantity+quantity}
@@ -37,7 +37,7 @@
 
 //     const removeItem = id => {
 //         const index = items.findeIndex(itemInList => itemInList.item.id === id)
-        
+
 //         if(index !== -1) items.splice(index, 0)
 
 //         setItems([...items])
@@ -53,47 +53,55 @@
 // }
 
 // export default CartContext
-import {createContext,useState} from "react"
+import { createContext, useState } from "react"
 
-export const CartContext = createContext()
+const CartContext = createContext()
 
-const {Consumer,Provider} = CartContext
+export function CartContextProvider({ children }) {
 
-const CustomProvider = ({children}) => {
-
-    const [carrito,setCarrito] = useState([])
-
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([]);
+    const [finalPrice, setFinalPrice] = useState(0);
+    const [finalQuantity, setFinalQuantity] = useState(0);
     
+
     const addItem = (item, quantity) => {
         const index = items.findIndex(itemInList => itemInList.item.id === item.id)
-        
-        if(index !== -1){
+        setFinalPrice(finalPrice + item.price * quantity);
+        console.log("precio final", item.price)
+        setFinalQuantity(finalQuantity + quantity);
+
+        if (index !== -1) {
             const nuevoItems = items
-            nuevoItems[index] = { item: nuevoItems[index].item, quantity: nuevoItems[index].quantity+quantity}
+            nuevoItems[index] = { item: nuevoItems[index].item, quantity: nuevoItems[index].quantity + quantity }
             setItems(nuevoItems)
         } else {
             setItems([...items, { item, quantity }])
         }
     }
 
-    const removeItem = (itemId) => {
-        console.log(itemId)
+    const removeItem = (id) => {
+        const index = items.findIndex((itemInList) => itemInList.item.id === id);
+        setFinalPrice(finalPrice - items[index].item.price * items[index].quantity);
+        setFinalQuantity(finalQuantity - items[index].quantity);
+        if (index !== -1) items.splice(index, 1);
+
+        setItems([...items]);
     }
 
     const clear = () => {
-        console.log("Clear")
+        setFinalQuantity(0);
+        setFinalPrice(0);
+        setItems([]);
     }
 
-    const isInCart = (id) => {}
 
-    const contexto_para_consumir = {carrito,addItem,removeItem,clear}
-    
+    // const contexto_para_consumir = {carrito,addItem,removeItem,clear}
+
     return (
-        <Provider value={contexto_para_consumir}>
+        <CartContext.Provider value={{ items, finalPrice, finalQuantity, addItem, removeItem, clear }}>
             {children}
-        </Provider>
+        </CartContext.Provider>
     )
 }
 
-export default CustomProvider
+export default CartContext
