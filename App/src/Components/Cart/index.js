@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import { Button, Table } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 import {Link} from "react-router-dom";
-import Form from "../form/form"
+import Form from "../form/form.js"
 import  CartContext from '../../Context/CartContext';
 
 export default function Cart() {
@@ -36,7 +36,7 @@ export default function Cart() {
              <div className="container">
                  <p>Precio Final: <strong>{`US$${finalPrice.toFixed(2)}`}</strong></p>
              </div>
-             <Form/>
+             <Form onSuccessBuy={()=> setSuccessBuy(true)}/>
          </div>
      )
         
