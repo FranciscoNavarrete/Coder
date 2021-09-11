@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllItem } from '../Helpers/getAllItem'
-import { firestore } from "../Components/Firebase/index"
-import { Collapse } from "react-bootstrap";
-
 
 export const useFetchItem = (category) => {
-
     
     const [state, setstate] = useState({
         data:[],
@@ -21,7 +17,5 @@ export const useFetchItem = (category) => {
             })
             
     },[category])
-
-    
     return state;
 }

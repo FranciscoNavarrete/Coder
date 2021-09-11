@@ -1,15 +1,13 @@
 import ItemDetail from "../ItemDetail";
-import Card from 'react-bootstrap/Card'
 import { useEffect, useState } from "react";
 import {useParams} from 'react-router-dom'
 import { firestore } from "../Firebase";
 
-
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const {id} = useParams();
-      useEffect(()=>{
-
+      
+    useEffect(()=>{
             const db = firestore;
             const collection = db.collection("productos")
             const query = collection.get()

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import getAllCategories from "../Helpers/getAllCategories";
 
-
 export const useFetchCategories = (category) => {
     const [state, setstate] = useState({
         data:[],

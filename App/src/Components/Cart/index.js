@@ -11,6 +11,8 @@ export default function Cart() {
     const [successBuy, setSuccessBuy] = useState(false);
 
     if (items.length === 0 && !successBuy)
+    if (finalPrice === 0)
+    
     return (
       <>
         <p>No hay items en tu carrito!</p>

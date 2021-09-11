@@ -4,7 +4,6 @@ import Input from "./input/Input";
 import CartContext from "../../Context/CartContext";
 import useForm from "../../Hooks/useForm";
 
-
 export default function Form({onSuccessBuy}) {
   const {items, finalPrice, clear} = useContext(CartContext);
 

@@ -2,7 +2,6 @@ import React from 'react';
 import ItemCount from '../ItemCount';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom"
- 
 
 const ListCategories = (category) => {
 

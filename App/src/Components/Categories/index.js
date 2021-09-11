@@ -3,7 +3,6 @@ import { useFetchCategories } from '../../Hooks/useFetchCategories'
 import ListCategories from '../ListCategories';
 import Spinner from 'react-bootstrap/Spinner'
 
-
 const Categories = ({ category }) => {
     const { data, loading } = useFetchCategories(category);
     return (

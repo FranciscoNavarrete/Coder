@@ -12,7 +12,6 @@ export default function useForm(fields) {
 
     let validFields = 0;
 
-    // TODO: Validar correctamente
     fields.forEach((field) => {
       validFields += field.trim().length ? 1 : 0;
     });
@@ -23,7 +22,7 @@ export default function useForm(fields) {
         callback(id);
       });
     } else {
-      setErr("Fields must contain at least one character");
+      setErr("Los campos deben contener al menos un carácter");
       setIsLoading(false);
     }
   };

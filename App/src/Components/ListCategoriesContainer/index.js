@@ -1,7 +1,6 @@
 import Categories from "../Categories";
 import {useParams} from 'react-router-dom'
 
-
 const ListCategoriesContainer = (  ) => {
     const {category} = useParams();
     return (
@@ -11,5 +10,4 @@ const ListCategoriesContainer = (  ) => {
         </div>
     )
 }
-
 export default ListCategoriesContainer
