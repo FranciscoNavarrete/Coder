@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
-
-
 import Button from 'react-bootstrap/Button';
-
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
@@ -11,19 +8,15 @@ import FormControl from 'react-bootstrap/FormControl'
     const ItemCount = ({ stock, initial, onAdd }) => {
     const [counter, setCounter] = useState(initial);
     const [stockTotal, setstockTotal] = useState(stock);
-
     const [stateOnAdd,setStateOnAdd] = useState(0);
-
-
+    
     const confirmar=()=>{
         if(stock>0){
-            console.log("Agregar al carrito, Tiene que llevar al carrito, con todos los productos por comprar. Llevandolo la cantidad del prod", counter);
             onAdd(counter);
         }
     }
     const itemAdd = () => {
         if(stockTotal<=1)
-            {console.log("No hay mas stock")}
         if(counter <= stock){
             setCounter(counter +1)
             setstockTotal(stockTotal -1)
@@ -39,8 +32,6 @@ import FormControl from 'react-bootstrap/FormControl'
                 setstockTotal(stockTotal +1)
         }
     }
-
-    
 
     return (
         <div >

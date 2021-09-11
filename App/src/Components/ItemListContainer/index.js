@@ -6,8 +6,7 @@ import IsLoading from "../loading/IsLoading";
 const ItemListContainer = (  ) => {
     
     const [items, setItems] = useState([])
-  const [status, setStatus] = useState("pending");
-
+    const [status, setStatus] = useState("pending");
     
       useEffect(()=>{
             setStatus("pending");
@@ -27,7 +26,6 @@ const ItemListContainer = (  ) => {
                     setStatus("success");
                 })
                 setItems(resultado_parseado);
-                console.log(resultado_parseado)
 
             })
      },[])
