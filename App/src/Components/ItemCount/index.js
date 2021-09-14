@@ -16,15 +16,22 @@ import FormControl from 'react-bootstrap/FormControl'
         }
     }
     const itemAdd = () => {
-        if(stockTotal<=1)
+        
+        console.log("stock", stock)
+        console.log("counter", counter)
+
+        if(stockTotal>=1)
         if(counter <= stock){
-            setCounter(counter +1)
+            setCounter(counter + 1)
             setstockTotal(stockTotal -1)
         }else{
         }
+        console.log("Cuenta", counter);
     }
     const itemSubstract = () =>
     {
+        console.log("stock", stock)
+        console.log("counter", counter)
         if(counter <= 0){
             console.warn("El valor no puede ser 0")
         }else{

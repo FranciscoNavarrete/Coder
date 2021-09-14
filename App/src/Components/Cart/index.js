@@ -10,9 +10,10 @@ export default function Cart() {
     const { items, finalPrice, removeItem } = useContext(CartContext)
     const [successBuy, setSuccessBuy] = useState(false);
 
-    if (items.length === 0 && !successBuy)
-    if (finalPrice === 0)
+    if (items.length === 0 && !successBuy || finalPrice === 0 )
     
+    
+   
     return (
       <>
         <p>No hay items en tu carrito!</p>
@@ -20,7 +21,8 @@ export default function Cart() {
       </>
     );
      return(
-         <div>
+         <div className ="container">
+             <strong>Su pedido es:</strong>
              {
                  items.map(({ item, quantity }) => (
                     <Card.Body ><div className="container">

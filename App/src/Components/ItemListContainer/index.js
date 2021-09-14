@@ -31,7 +31,7 @@ const ItemListContainer = (  ) => {
      },[])
      if (status === "pending") return <IsLoading />;
     return (
-        <div >
+        <div className="container">
             <ItemList items={items}/>
         </div>
     )

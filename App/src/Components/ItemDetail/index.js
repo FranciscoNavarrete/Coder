@@ -12,10 +12,11 @@ export default function ItemDetail({item}){
     const handleOnAdd = (quantity) => {
         setShowCounter(false)
         addItem(item, quantity)
+        console.log(item)
     }
         
     return (
-        <>
+        <div className="container">
         <div className="container">
             <p>{item.title}</p>
             <img src = {item.image}width="150" height="150" text-align ="center" alt="thumbnail"></img>
@@ -30,6 +31,6 @@ export default function ItemDetail({item}){
             </Link>
             )}
         </div>
-        </>
+        </div>
     )
 }

@@ -44,7 +44,7 @@ export default function Form({onSuccessBuy}) {
       Success buy! ID: <strong>{id}</strong>
     </p>
   ) : (
-    <form
+    <form className="container"
       
       onSubmit={(e) => {
         const transaction = createTransaction();
@@ -55,11 +55,28 @@ export default function Form({onSuccessBuy}) {
         });
       }}
     >
+      <br/>
+      <br/>
+      <strong>LLENAR FORMULARIO PARA FINALIZAR SU COMPRA</strong>
+      <br/>
+
+      <p>NOMBRE:</p>
       <Input name="name" onChange={handleChange} />
+      <br/>
+      <br/>
+      
+      
+      <p>TELEFONO</p>
       <Input name="phone" onChange={handleChange} />
+      <br/>
+      <br/>
+      
+     
+      <p>MAIL</p>
       <Input type="email" name="email" onChange={handleChange} />
+      
       <button onClick={enviar}>
-        submit
+        Enviar datos...
       </button>
       {Boolean(err) && err}
     </form>
